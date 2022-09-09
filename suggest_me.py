@@ -23,12 +23,24 @@ print("Enter \'!help\'' to get more information")
 while True:
 
 	users_choice = input("\nWhat you want to get suggested? ").lower()
+
+	if users_choice == '!help':
+		print('We can suggest you about \'Movies\',\'Books\',\'Anime\'')
+		continue
+
 	user_preference = input("What genre do you want? ").lower()
 
+	if user_preference == '!help':
+		preference = Mylist.get(users_choice)
+		print(f'We have collection of {preference.keys()}')
+		continue
+
+	#Next syntax
 
 	if users_choice == 'exit' or user_preference == 'exit':
 		print('Thanks for using us <3')
 		break
+
 
 	elif users_choice in Mylist and user_preference in Mylist.get(users_choice):
 
