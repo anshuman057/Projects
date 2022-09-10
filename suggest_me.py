@@ -4,40 +4,40 @@ import random
 
 			
 			#Movies
-Mylist ={	'movies' :{'action' : ['Matrix','John Wick','Vikram','Pushpa'],
-		'adventure' : ['Jumanji','The Lion King','Fantastic Beasts','Uncharted'],
-		'superhero' : ['Spiderman NO Way Home','Batman The Dark Knight']},
+Mylist ={	'Movies' :{'action' : ['Matrix','John Wick','Vikram','Pushpa'],
+		'Adventure' : ['Jumanji','The Lion King','Fantastic Beasts','Uncharted'],
+		'Superhero' : ['Spiderman NO Way Home','Batman The Dark Knight']},
 		
 		# Books
-		 'books' : {'selfgrowth' : ['5 AM club','Ikigai']},
+		 'Books' : {'selfgrowth' : ['5 AM club','Ikigai']},
 
 		# Anime
 
-		 'animes' : {'action' : ['Naruto','Bleach','My Hero Academia','Jujutsu Kaisen','Boruto'], 
-		'adventure' : ['One Piece','Vinland Saga','Gurren Laggan','Gojo\'s Bizzar Adventure', ],
-		'sports' : ['Haiyuu','Kuroko\'s Basketball'],
-		'classroom' : ['Classroom of Elite']}	}
+		 'Animes' : {'action' : ['Naruto','Bleach','My Hero Academia','Jujutsu Kaisen','Boruto'], 
+		'Adventure' : ['One Piece','Vinland Saga','Gurren Laggan','Gojo\'s Bizzar Adventure', ],
+		'Sports' : ['Haiyuu','Kuroko\'s Basketball'],
+		'Classroom' : ['Classroom of Elite']}	}
 
 print("Enter \'!help\'' to get more information")
 
 while True:
 
-	users_choice = input("\nWhat you want to get suggested? ").lower()
+	users_choice = input("\nWhat you want to get suggested? ").capitalize()
 
 	if users_choice == '!help':
-		print('We can suggest you about \'Movies\',\'Books\',\'Anime\'')
+		print(f'We can suggest you about {(", ".join(str(key) for key in Mylist.keys()))}')
 		continue
 
-	user_preference = input("What genre do you want? ").lower()
+	user_preference = input("What genre do you want? ").capitalize()
 
 	if user_preference == '!help':
 		preference = Mylist.get(users_choice)
-		print(f'We have collection of {preference.keys()}')
+		print(f'We have collection of {(", ".join(str(key) for key in preference.keys()))}')
 		continue
 
 	#Next syntax
 
-	if users_choice == 'exit' or user_preference == 'exit':
+	if users_choice == 'Exit' or user_preference == 'Exit':
 		print('Thanks for using us <3')
 		break
 
