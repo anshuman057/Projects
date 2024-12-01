@@ -1,0 +1,156 @@
+body {
+  background-color: #0d0d0d; /* Dark background */
+  color: #ffffff; /* White text */
+  font-family: "Orbitron", sans-serif; /* Futuristic font */
+  display: grid; /* Make the parent a grid container */
+  place-items: center; /* Center both horizontally and vertically */
+  height: 100vh; /* Optional: Set the height to fill the viewport */
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1a1a1a; /* Dark input background */
+  color: #00ffcc; /* Neon teal text */
+  font-size: 18px;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* Neon glow */
+  transition: 0.3s;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 1); /* Brighter glow on focus */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00ffcc; /* Neon teal button */
+  color: #0d0d0d; /* Dark text on button */
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* Neon glow */
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #00e6b3; /* Slightly darker teal on hover */
+  box-shadow: 0 0 20px rgba(0, 255, 204, 1); /* Brighter glow on hover */
+}
+
+div {
+  margin: 10px 0;
+  text-align: center;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+#weather-icon,
+#city-name,
+#temperature,
+#description,
+#humidity,
+#wind-speed {
+  color: #ffcc00; /* Neon yellow for weather details */
+  display: none;
+}
+
+#parent-container {
+  display: grid; /* Make the parent a grid container */
+  place-items: center; /* Center both horizontally and vertically */
+  height: 100vh; /* Optional: Set the height to fill the viewport */
+}
+
+#weather-icon {
+  display: none; /* Hide by default */
+  margin-top: 10px;
+  width: 100px; /* Set a width for the icon */
+  height: 100px; /* Set a height for the icon */
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(
+    0,
+    255,
+    204,
+    0.2
+  ); /* Light teal background for the icon */
+  border-radius: 50%; /* Circular shape */
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.5), 0 0 40px rgba(0, 255, 204, 0.3); /* Glowing effect */
+  position: relative; /* For positioning the pseudo-element */
+  overflow: hidden; /* To hide overflow */
+  animation: pulse 2s infinite; /* Pulsing animation */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5), 0 0 40px rgba(0, 255, 204, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.7), 0 0 60px rgba(0, 255, 204, 0.5);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(0, 255, 204, 0.5), 0 0 40px rgba(0, 255, 204, 0.3);
+  }
+}
+
+#weather-icon img {
+  width: 80%; /* Responsive icon size */
+  height: auto; /* Maintain aspect ratio */
+  z-index: 1; /* Ensure the icon is above the background */
+  position: relative; /* Position relative for layering */
+}
+
+#weather-icon::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%; /* Circular shape */
+  background: radial-gradient(
+    circle,
+    rgba(0, 255, 204, 0.3) 0%,
+    rgba(0, 255, 204, 0) 70%
+  );
+  z-index: 0; /* Layer behind the icon */
+  animation: glow 2s infinite; /* Glowing background animation */
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+#hourly-forecast {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hour {
+  background-color: #1a1a1a; /* Dark background for hourly forecast */
+  color: #00ffcc; /* Neon teal text */
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.5); /* Neon glow */
+  width: 80px; /* Fixed width for hourly forecast */
+}
