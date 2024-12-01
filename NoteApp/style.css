@@ -1,0 +1,15 @@
+/* Basic styles for the notes */
+#notes-list {
+  margin-top: 20px;
+}
+
+.notes {
+  width: 100px; /* Set a width for visibility */
+  height: 50px; /* Set a height for visibility */
+  margin: 5px;
+  display: inline-block; /* Make them inline-block for better layout */
+  border: 1px solid #000; /* Add a border for visibility */
+  text-align: center; /* Center text */
+  line-height: 50px; /* Center text vertically */
+  cursor: pointer; /* Change cursor to pointer */
+}
