@@ -1,0 +1,8 @@
+.text-container {
+  display: flex;
+}
+.win,
+.loss,
+h1 {
+  margin-left: 6px;
+}
