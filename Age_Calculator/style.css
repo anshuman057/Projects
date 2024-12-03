@@ -1,0 +1,45 @@
+* {
+  border: 0;
+
+  margin: 0;
+
+  box-sizing: border-box;
+}
+
+#main {
+  height: 100vh;
+
+  width: 100%;
+
+  overflow-x: hidden;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+#age-container {
+  height: 300px;
+
+  width: 500px;
+
+  background: green;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 30px;
+}
+
+input {
+  width: 200px;
+
+  height: 20px;
+}
