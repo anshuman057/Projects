@@ -177,7 +177,8 @@ ul {
   float: left;
   align-items: center;
   gap: 10px;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-between;
   font-size: 15px;
   color: #fff;
   /* cursor: pointer; */
@@ -297,8 +298,8 @@ main {
 }
 
 #nav-legal {
-  /* position: absolute; */
-  bottom: 0;
+  position: absolute;
+  bottom: 140px;
   margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -313,6 +314,7 @@ main {
   cursor: pointer;
   overflow: hidden;
   white-space: nowrap;
+  /* margin-left: -30px; */
   margin-right: -5px;
 }
 
@@ -328,8 +330,9 @@ main {
 }
 
 #language-change {
-  /* position: absolute; */
-  margin: 30px 0 0 20px;
+  position: absolute;
+  bottom: 90px;
+  margin: 0 0 0 30px;
   cursor: pointer;
   border: 0.2px solid #fff;
   display: block;
@@ -346,6 +349,10 @@ main {
 
 #language-change:hover {
   transform: scale(1.05);
+}
+
+#langue-change + #nav-legal {
+  margin-top: auto;
 }
 
 /* .sidebar {
