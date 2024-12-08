@@ -45,12 +45,12 @@ nav {
   position: relative;
   display: flex;
   align-items: center;
-  font-size: 22px;
+  font-size: 20px;
   background: #1f1f1f;
-  border-radius: 40px;
-  padding: 12.2px;
-  height: 50px;
-  width: 50px;
+  border-radius: 45px;
+  padding: 9px;
+  height: 40px;
+  width: 40px;
   margin-right: 10px;
   overflow: visible;
 }
@@ -81,12 +81,13 @@ nav {
   align-items: center;
   gap: 10px;
   background: #1f1f1f;
+  font-size: 18px;
   border-radius: 40px;
   column-rule: 2;
   padding: 20px;
-  height: 50px;
+  height: 40px;
   width: 400px;
-  font-size: 22px;
+  /* font-size: 22px; */
   justify-content: space-between;
 }
 
@@ -178,8 +179,9 @@ ul {
   justify-content: center;
   font-size: 15px;
   color: #fff;
-  cursor: pointer;
-  height: 91vh;
+  /* cursor: pointer; */
+  padding: 20px;
+  height: 90vh;
   background-color: #121212;
   width: 350px;
   border-radius: 0 20px 20px 0;
@@ -193,7 +195,7 @@ main {
   align-items: center;
   height: 80vh;
   background: #212121;
-  height: 91vh;
+  height: 90vh;
   border-radius: 20px;
   overflow-y: visible;
   scroll-behavior: smooth;
@@ -203,11 +205,98 @@ main {
   border-radius: 20px 0 0 20px;
 }
 
-/* .container {
+#libary-heading {
+  color: #e8d9d9;
+  padding: 5px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 10px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
 }
 
-.sidebar {
+#libary-heading h1:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+#playlist-container {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  padding: 9.6px;
+  color: #e8d9d9;
+  cursor: pointer;
+}
+
+#playlist-container:hover {
+  transform: scale(1.1);
+  color: #fff;
+  background-color: #444;
+}
+
+#somehting {
+  display: grid;
+  grid-template-columns: 1fr;
+  /* gap: 50px */
+}
+
+#blabla {
+  margin-bottom: 30px;
+  background-color: #1f1f1f;
+  display: flex;
+  height: 150px;
+  width: 300px;
+  border-radius: 10px;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+  color: #fff;
+}
+
+#blabla span {
+  margin-top: 15px;
+  margin-left: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#blabla h4 {
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: smaller;
+}
+
+#podcast,
+#playlist {
+  margin-top: 10px;
+  margin-left: 20px;
+  background-color: black;
+  display: grid;
+  height: 40px;
+  width: 130px;
+  border-radius: 20px;
+  justify-content: flex-start;
+  grid-template-columns: 1fr;
+  align-items: center;
+  /* padding: 5px */
+  text-align: center;
+  cursor: pointer;
+  color: #fff;
+}
+
+#podcast:hover,
+#playlist:hover {
+  transform: scale(1.1);
+  color: #fff;
+  background-color: #444;
+}
+
+/* .sidebar {
   width: 250px;
   padding: 20px;
   background-color: #181818;
