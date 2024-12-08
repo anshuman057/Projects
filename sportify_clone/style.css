@@ -172,6 +172,7 @@ ul {
 }
 
 #library-container {
+  position: relative;
   margin: 5px 10px 5px 5px;
   float: left;
   align-items: center;
@@ -193,7 +194,6 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80vh;
   background: #212121;
   height: 90vh;
   border-radius: 20px;
@@ -294,6 +294,58 @@ main {
   transform: scale(1.1);
   color: #fff;
   background-color: #444;
+}
+
+#nav-legal {
+  /* position: absolute; */
+  bottom: 0;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+  color: #fff;
+}
+#nav-legal span {
+  color: #dbbfbf;
+  font-size: 0.7rem;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: -5px;
+}
+
+#nav-legal #cookies {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+#cookies:hover {
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+}
+
+#language-change {
+  /* position: absolute; */
+  margin: 30px 0 0 20px;
+  cursor: pointer;
+  border: 0.2px solid #fff;
+  display: block;
+  height: 30px;
+  padding: 8px;
+  font-size: 0.8rem;
+  width: 80px;
+  border-radius: 20px;
+  background: black;
+  color: #fff;
+  font-weight: 400;
+  text-align: center;
+}
+
+#language-change:hover {
+  transform: scale(1.05);
 }
 
 /* .sidebar {
