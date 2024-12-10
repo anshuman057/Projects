@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+      }
+
+      h1 {
+        text-align: center;
+        color: #00698f;
+      }
+
+      input[type="text"] {
+        width: 50%;
+        height: 30px;
+        font-size: 18px;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        width: 20%;
+        height: 40px;
+        font-size: 18px;
+        background-color: #4caf50;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #3e8e41;
+      }
+
+      #result {
+        display: none;
+        width: 50%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #result h2 {
+        color: #00698f;
+      }
+
+      #result img {
+        width: 100%;
+        min-height: 100px;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+      }
+
+      #result p {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pokemon App</h1>
+    <input
+      type="text"
+      placeholder="Enter your Pokemon"
+      id="pokemon-search"
+      required
+      onkeyup="if(event.key === 'Enter') searchPokemon()"
+    />
+
+    <button id="search-button" onclick="searchPokemon()">Search</button>
+    <div id="result"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
