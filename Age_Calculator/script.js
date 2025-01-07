@@ -1,3 +1,5 @@
+// Basic Javascript project
+
 document.getElementById("calculate-age").addEventListener("click", function () {
   const dobInput = document.getElementById("dob-input").value;
 
